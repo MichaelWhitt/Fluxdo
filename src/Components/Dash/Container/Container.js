@@ -15,11 +15,11 @@ export class Container extends React.Component {
 render () {
     return(
         <div className={`${styles.container}`}>
-            <div style={{display: 'flex'}}>
+            <div style={{display: 'flex', overflowX: 'scroll;'}}>
                 {this.state.columns.map(c => c)}
                 <div>
                     <button className={`${styles.newListBtn}`} onClick={this.createNewColumn}>+ Create New List</button>
-                </div>    
+                </div>
             </div>
         </div>
     )

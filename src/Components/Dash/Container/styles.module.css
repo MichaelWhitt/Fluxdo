@@ -1,10 +1,21 @@
 
 .container {
-    width: 100vw;
+    min-width: 100vw;
     height: calc(100vh - 60px);
     background-image: url(../../../Assets/space.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: scroll;
+    overflow-y: hidden
+
+}
+.container::-webkit-scrollbar {
+  height: 20px;
+  background: rgba(0,0,0, 0.5);
+}
+.container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
 }
 
 .newListBtn {

@@ -1,5 +1,6 @@
 .cardColumn {
-    width: 275px;
+    min-width: 275px;
+    max-width: 275px;
     height: 80vh;
     background-color: #ddd;
     border-radius: 15px;
