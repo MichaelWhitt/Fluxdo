@@ -66,6 +66,8 @@
 
 .deleteCard {
     position: relative;
+    top: -35px;
+    right: -43%;
     background-color: #ff66aa;
     width: 25px;
     height: 25px;
