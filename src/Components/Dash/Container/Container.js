@@ -13,12 +13,20 @@ export class Container extends React.Component {
     }
 
 render () {
+  let finalId = 0
     return(
         <div className={`${styles.container}`}>
-            <div style={{display: 'flex', overflowX: 'scroll;'}}>
-                {this.state.columns.map(c => c)}
+            <div style={{display: 'flex'}}>
+                {this.state.columns.map((c,i) => {
+                finalId = i
+                console.log(finalId)
+                  return <div key={i} id={i}>{c}</div>
+                })}
                 <div>
                     <button className={`${styles.newListBtn}`} onClick={this.createNewColumn}>+ Create New List</button>
+                </div>
+                <div>
+                    <button className={`${styles.zoomBtn}`}><a href={`#${finalId}`}>Zoom >></a></button>
                 </div>
             </div>
         </div>
