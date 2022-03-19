@@ -1,0 +1,12 @@
+.cardHolder {
+    width: 15%;
+    height: 80vh;
+    background-color: #aaa;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #ddd;
+    width: 90%;
+}
