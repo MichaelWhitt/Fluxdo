@@ -10,11 +10,23 @@
     padding: 10px;
 }
 
+/* .cardColumn::-webkit-scrollbar {
+    width: 10px;
+}
+
+.cardColumn::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.cardColumn::-webkit-scrollbar-thumb {
+    background: #aff00a;
+} */
+
 .card {
     background-color: #fff;
     width: 90%;
     height: 11%;
-    box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #000;
     border-radius: 5px;
     margin: 10px 0;
     display: -webkit-box;
@@ -35,14 +47,13 @@
     background-color: #fff;
     width: 96%;
     max-width: 96%;
-    height: 45px;
-    max-height: 45px;
-    box-shadow: 0 0 5px #ccc;
+    min-height: 10%;
+    height: 10%;
     border-radius: 5px;
     padding: 5px;
     border: none;
-    margin-bottom: 5px;
     resize: none;
+    box-shadow: 0 0 5px #aaa;
 }
 
 .cardInput::placeholder {
@@ -51,17 +62,36 @@
 }
 
 .cardInput:focus-visible {
-    outline: none;
+    outline: 1px solid #aaa;
 }
 
-.cardSaveBtn {
-    border: none;
-    background: #aadd;
+.createCardBtn {
+    padding-left: 10px;
+    background: #93E9BE;
     border-radius: 5px;
-    height: 25px;
+    border: none;
+    box-shadow: 0 0 5px #aaa;
 }
 
-.cardSaveBtn:hover {
+.createCardBtn:hover {
+    background: #93f9BF;
     cursor: pointer;
-    background: #aaff
+}
+
+.deleteCard {
+    z-index: 1;
+    position: relative;
+    bottom: 32px;
+    right: -122px !important;
+    background-color: #ff66aa;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 2px #aaa;
+}
+
+.deleteCard:hover {
+    background-color: #ff66ff;
+    cursor: pointer;
 }
