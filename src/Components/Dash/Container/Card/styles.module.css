@@ -1,12 +1,67 @@
-.cardHolder {
-    width: 15%;
+.cardColumn {
+    width: 275px;
     height: 80vh;
-    background-color: #aaa;
+    background-color: #ddd;
     border-radius: 15px;
-    margin-top: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 10px;
 }
 
 .card {
-    background-color: #ddd;
+    background-color: #fff;
     width: 90%;
+    height: 11%;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 5px;
+    text-align: left;
+}
+
+
+.card:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.cardInput {
+    background-color: #fff;
+    width: 96%;
+    max-width: 96%;
+    height: 45px;
+    max-height: 45px;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    margin-bottom: 5px;
+    resize: none;
+}
+
+.cardInput::placeholder {
+    position: absolute;
+    top: 0;
+}
+
+.cardInput:focus-visible {
+    outline: none;
+}
+
+.cardSaveBtn {
+    border: none;
+    background: #aadd;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.cardSaveBtn:hover {
+    cursor: pointer;
+    background: #aaff
 }
