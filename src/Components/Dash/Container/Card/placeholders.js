@@ -23,7 +23,7 @@ export const placeholders = [
     'Uninstall Netscape...',
     'Pay the bills...',
     'Pay the rent...',
-    'Watch Game of Thrones',
+    'Watch Game of Thrones...',
     'Find a scary movie...',
     'Replace lightbulbs...',
     'Buy soap...',
@@ -35,5 +35,10 @@ export const placeholders = [
     'Check mortgage rates...',
     'Return the books...',
     'Dye my hair...',
-    'Donate to charity...'
+    'Donate to charity...',
+    'Cook dinner...',
+    'Finish certificate...',
+    'Apply for dream job...',
+    'Learn how to code...',
+    'Discuss Politics...'
 ]
