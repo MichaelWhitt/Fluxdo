@@ -3,7 +3,6 @@ import Card from "./Card"
 import styles from './styles.module.css'
 
 //TODO
-// Issues with how state manipulates card data, updates card in array instead of deleting all of the info
 // Fix card spacing...I think delete button changed margin for some reason
 
 export default class CardColumn extends Component {
@@ -27,7 +26,7 @@ export default class CardColumn extends Component {
         const {cards} = this.state
         if (cards.length < 6) {
             const num = this.randomNumGen()
-            this.setState({cards: [...cards, {id: num, card: <Card num={num} delete={this.deleteCard} />}]})
+            this.setState({cards: [...cards, {id: num, card: <Card num={num} key={num} delete={this.deleteCard} />}]})
         } else {
             alert("Please create a new column or remove a card to create a new one.")
         }
@@ -35,10 +34,11 @@ export default class CardColumn extends Component {
 
     deleteCard = (num) => {
         let oldCards = this.state.cards
-        let newCards = oldCards.filter(item => {
-            return +item.id != +num;
+        let newCards = oldCards.filter(i => {
+            return i.id != num;
         })
         this.setState({cards: newCards})
+        console.log(this.state)
     }
 
     render(){

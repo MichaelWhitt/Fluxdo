@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import styles from './styles.module.css'
+import { placeholders } from "./placeholders"
 
 export default class Card extends Component {
 
@@ -20,15 +21,18 @@ export default class Card extends Component {
         if (!this.state.editable !== true) {this.setState({editable: true})} 
     }
 
+    generatePlaceholder = () => {
+        return placeholders[Math.floor(Math.random() * placeholders.length)]
+    }
+
     render(){
-        console.log('this', this)
         return(
             <>
                 <textarea 
                     className={`${styles.cardInput}`} 
-                    placeholder="Type here..." 
+                    placeholder={this.generatePlaceholder()} 
                     onBlur={this.saveCard} 
-                    onClick={this.editCard} 
+                    onClick={this.editCard}
                     onChange={(e) => this.handleTextChange(e)} 
                     type='text'
                 />
