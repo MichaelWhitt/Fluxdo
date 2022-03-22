@@ -10,40 +10,25 @@
     padding: 10px;
 }
 
-/* .cardColumn::-webkit-scrollbar {
-    width: 10px;
+.columnTitle {
+    margin-bottom: 15px;
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    background: #ddd;
+    font-weight: 700;
+    color: rgb(50, 50, 50);
+    font-size: 1rem;
 }
 
-.cardColumn::-webkit-scrollbar-track {
-    background: #f1f1f1;
+.columnTitle:focus {
+    outline-color: #93E9BE;
+    background-color: #fff;
+    transition-duration: 0.3s;
 }
-
-.cardColumn::-webkit-scrollbar-thumb {
-    background: #aff00a;
-} */
 
 .card {
-    background-color: #fff;
-    width: 90%;
-    height: 11%;
-    box-shadow: 0 0 5px #000;
-    border-radius: 5px;
-    margin: 10px 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    padding: 5px;
-    text-align: left;
-}
-
-
-.card:hover {
-    background-color: #f2f2f2;
-    cursor: pointer;
-}
-
-.cardInput {
     background-color: #fff;
     width: 96%;
     max-width: 96%;
@@ -53,15 +38,16 @@
     padding: 5px;
     border: none;
     resize: none;
+    margin-top: -15px;
     box-shadow: 0 0 5px #aaa;
 }
 
-.cardInput::placeholder {
+.card::placeholder {
     position: absolute;
     top: 0;
 }
 
-.cardInput:focus-visible {
+.card:focus-visible {
     outline: 1px solid #aaa;
 }
 

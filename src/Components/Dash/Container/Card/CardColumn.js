@@ -8,7 +8,7 @@ import styles from './styles.module.css'
 export default class CardColumn extends Component {
 
     state = {
-        columnTitle : '' || 'Edit...',
+        columnTitle : '',
         cards: []
     }
     
@@ -24,7 +24,7 @@ export default class CardColumn extends Component {
 
     createCard = () => {
         const {cards} = this.state
-        if (cards.length < 6) {
+        if (cards.length < 7) {
             const num = this.randomNumGen()
             this.setState({cards: [...cards, {id: num, card: <Card num={num} key={num} delete={this.deleteCard} />}]})
         } else {
@@ -41,19 +41,27 @@ export default class CardColumn extends Component {
         console.log(this.state)
     }
 
+    editColumnTitle = (e) => {
+        this.setState({columnTitle: e.target.value})
+    }
+
     render(){
-        console.log('this.state', this.state.cards)
         return(
             <div className={`${styles.cardColumn}`}>
-                <div style={{width: '100%',height: 30, display: 'flex', alignItems: 'center'}}>
-                    <div style={{paddingLeft: 10}}>{this.state.columnTitle}</div>
+                <div style={{width: '100%',height: 30, display: 'flex', alignItems: 'center', margin: '10px 0 15px 0'}}>
+                    <input 
+                        className={`${styles.columnTitle}`}
+                        onClick={this.editColumnTitle}
+                        placeholder={'Click to edit title...'}
+                        onChange={(e) => this.setState({columnTitle: e.target.value})}
+                    /> 
                 </div>
                 {this.state.cards.map( c => {
                     return(c.card)
                 })}
-                <div style={{width: '100%', height: 30, display: 'flex'}}>
-                    <button className={`${styles.createCardBtn}`} onClick={() => this.createCard()}>+ Create a card</button>
-                </div>
+               {this.state.cards.length < 7 ? <div style={{width: '100%', height: 30, display: 'flex'}}>
+                    <button className={`${styles.createCardBtn}`} onClick={() => this.createCard()}>+ Create Card</button>
+                </div>: null}
             </div>
         )
     }

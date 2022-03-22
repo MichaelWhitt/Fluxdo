@@ -29,7 +29,7 @@ export default class Card extends Component {
         return(
             <>
                 <textarea 
-                    className={`${styles.cardInput}`} 
+                    className={`${styles.card}`} 
                     placeholder={this.generatePlaceholder()} 
                     onBlur={this.saveCard} 
                     onClick={this.editCard}

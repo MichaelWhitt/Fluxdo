@@ -4,7 +4,6 @@ import CardColumn from "./Card/CardColumn"
 
 export class Container extends React.Component {
 
-
 render () {
     return(
         <div className={`${styles.container}`}>
