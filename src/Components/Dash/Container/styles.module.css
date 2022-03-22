@@ -1,5 +1,8 @@
+
 .container {
     width: 100vw;
     height: calc(100vh - 60px);
-    background-color: seagreen;
+    background-image: url(../../../Assets/space.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
