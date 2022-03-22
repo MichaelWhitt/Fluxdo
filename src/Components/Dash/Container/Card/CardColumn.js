@@ -3,39 +3,41 @@ import Card from "./Card"
 import styles from './styles.module.css'
 
 //TODO
-// Find a better way to remove card from list-- unique ID, maybe RNG or hash?
-// Use this to delete cards from list
+// Issues with how state manipulates card data, updates card in array instead of deleting all of the info
 // Fix card spacing...I think delete button changed margin for some reason
 
 export default class CardColumn extends Component {
 
     state = {
         columnTitle : '' || 'Edit...',
-        cards: [],
-        cardInfo: ''
-    }
-
-   buildCards = (cards) => {
-       let cardArr = []
-       for (let c = 0; c < this.state.cards.length; c++){
-           cardArr.push(this.state.cards[c])
-       }
-       return cardArr
+        cards: []
     }
     
+    randomNumGen = () => {
+        const nums = [1,2,3,4,5,6,7,8,9,0]
+        let randomId = '1';
+        for (let i = 0; i < nums.length; i++) {
+            let chosenNum = Math.floor(Math.random() * i)
+            randomId += nums[chosenNum]
+        }
+        return randomId
+    }
+
     createCard = () => {
         const {cards} = this.state
-        if (cards.length < 7) {
-            const num = cards.length
-            this.setState({cards: [...cards, <Card num={num} delete={this.deleteCard}/>]})
+        if (cards.length < 6) {
+            const num = this.randomNumGen()
+            this.setState({cards: [...cards, {id: num, card: <Card num={num} delete={this.deleteCard} />}]})
         } else {
             alert("Please create a new column or remove a card to create a new one.")
         }
     }
 
     deleteCard = (num) => {
-        const newCards = this.state.cards
-        newCards.splice(num, 1)
+        let oldCards = this.state.cards
+        let newCards = oldCards.filter(item => {
+            return +item.id != +num;
+        })
         this.setState({cards: newCards})
     }
 
@@ -46,7 +48,9 @@ export default class CardColumn extends Component {
                 <div style={{width: '100%',height: 30, display: 'flex', alignItems: 'center'}}>
                     <div style={{paddingLeft: 10}}>{this.state.columnTitle}</div>
                 </div>
-                {this.buildCards(this.state.cards)}
+                {this.state.cards.map( c => {
+                    return(c.card)
+                })}
                 <div style={{width: '100%', height: 30, display: 'flex'}}>
                     <button className={`${styles.createCardBtn}`} onClick={() => this.createCard()}>+ Create a card</button>
                 </div>

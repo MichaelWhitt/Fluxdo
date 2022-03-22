@@ -4,26 +4,24 @@ import styles from './styles.module.css'
 export default class Card extends Component {
 
     state={
-        cardInfo: '',
         value: '',
         editable: false
     }
 
-    saveCard = (e) => {
-        this.setState({editable: false})
-        this.setState({cardInfo: this.state.value})
+    saveCard = () => this.setState({editable: false})
+
+    componentDidUpdate(){
+        console.log('this update', this)
     }
 
-    handleTextChange = (e) => {
-        this.setState({value: e.target.value})
-    }
+    handleTextChange = (e) => this.setState({value: e.target.value})
 
     editCard = () => {
         if (!this.state.editable !== true) {this.setState({editable: true})} 
     }
 
     render(){
-        console.log(this.state)
+        console.log('this', this)
         return(
             <>
                 <textarea 
