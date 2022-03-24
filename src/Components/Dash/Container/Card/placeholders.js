@@ -10,6 +10,7 @@ export const placeholders = [
     'Order treats from Amazon...',
     'Buy flowers for special other...',
     'Call mom...',
+    'Vacuum the dog...',
     'Congratulate friend...',
     'Treat myself to my favorite food...',
     'Check in with siblings...',
