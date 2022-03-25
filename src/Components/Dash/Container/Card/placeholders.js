@@ -42,5 +42,8 @@ export const placeholders = [
     'Apply for dream job...',
     'Learn how to code...',
     'Discuss politics...',
-    'Boop the snoot...'
+    'Boop the snoot...',
+    'Mow the lawn...',
+    'Plant the plant...',
+    'Recycle Recyclables...'
 ]
