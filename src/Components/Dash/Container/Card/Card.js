@@ -18,7 +18,7 @@ export default class Card extends Component {
     handleTextChange = (e) => this.setState({value: e.target.value})
 
     editCard = () => {
-        if (!this.state.editable !== true) {this.setState({editable: true})} 
+        if (!this.state.editable !== true) {this.setState({editable: true})}
     }
 
     generatePlaceholder = () => {
@@ -28,15 +28,17 @@ export default class Card extends Component {
     render(){
         return(
             <>
-                <textarea 
-                    className={`${styles.card}`} 
-                    placeholder={this.generatePlaceholder()} 
-                    onBlur={this.saveCard} 
-                    onClick={this.editCard}
-                    onChange={(e) => this.handleTextChange(e)} 
-                    type='text'
-                />
-                <button className={`${styles.deleteCard}`} onClick={() => this.props.delete(this.props.num)}>X</button>
+              <div style={{height: 60, width: '100%', marginTop: 20}}>
+                  <textarea
+                      className={`${styles.card}`}
+                      placeholder={this.generatePlaceholder()}
+                      onBlur={this.saveCard}
+                      onClick={this.editCard}
+                      onChange={(e) => this.handleTextChange(e)}
+                      type='text'
+                  />
+                  <button className={`${styles.deleteCard}`} onClick={() => this.props.delete(this.props.num)}>X</button>
+              </div>
             </>
         )
     }
