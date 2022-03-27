@@ -45,5 +45,6 @@ export const placeholders = [
     'Boop the snoot...',
     'Mow the lawn...',
     'Plant the plant...',
-    'Recycle Recyclables...'
+    'Recycle Recyclables...',
+    'Download Runescape...'
 ]
