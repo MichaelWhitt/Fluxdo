@@ -50,5 +50,6 @@ export const placeholders = [
     'Clean the pool...',
     'Buy stonks...',
     'Feed the Sheeb...',
-    'Swim with the fishes...'
+    'Swim with the fishes...',
+    'Feed the ducks...'
 ]
