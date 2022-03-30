@@ -52,5 +52,6 @@ export const placeholders = [
     'Feed the Sheeb...',
     'Swim with the fishes...',
     'Feed the ducks...',
-    'Charge my phone...'
+    'Charge my phone...',
+    'Excavate the artifact...'
 ]
