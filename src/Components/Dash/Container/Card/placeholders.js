@@ -55,5 +55,12 @@ export const placeholders = [
     'Charge my phone...',
     'Excavate the artifact...',
     'Call the bank...',
-    'Row the boat...'
+    'Row the boat...',
+    'Wrap the presents...',
+    'Discover Narnia...',
+    'Learn Tai Chi...',
+    'Explore Atlantis...',
+    'Go to Ikea...',
+    'Break the sound barrier...',
+    'Release the Kraken...'
 ]
