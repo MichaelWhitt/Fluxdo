@@ -63,5 +63,6 @@ export const placeholders = [
     'Go to Ikea...',
     'Break the sound barrier...',
     'Release the Kraken...',
-    'Donate blood...'
+    'Donate blood...',
+    'Learn Farsi...'
 ]
