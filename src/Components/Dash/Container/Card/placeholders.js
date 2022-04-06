@@ -65,5 +65,6 @@ export const placeholders = [
     'Release the Kraken...',
     'Donate blood...',
     'Learn Farsi...',
-    'Buy a birthday cake...'
+    'Buy a birthday cake...',
+    'Clean the Earth...'
 ]
