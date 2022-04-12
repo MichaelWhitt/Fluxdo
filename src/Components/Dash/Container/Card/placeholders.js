@@ -71,5 +71,6 @@ export const placeholders = [
     'Buy Dogecoin...',
     'Stare into the Void...',
     'Get back on Keto...',
-    'Disrupt and industry...'
+    'Disrupt and industry...',
+    'Rage against the Machine...'
 ]
