@@ -35,7 +35,7 @@ export default class CardColumn extends Component {
     deleteCard = (num) => {
         let oldCards = this.state.cards
         let newCards = oldCards.filter(i => {
-            return i.id != num;
+            return i.id !== num;
         })
         this.setState({cards: newCards})
         console.log(this.state)

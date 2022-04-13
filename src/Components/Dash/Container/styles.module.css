@@ -37,9 +37,8 @@
 }
 
 .zoomBtn {
-    width: 100px;
-    margin-top: 10px;
-    height: 40px;
+    width: 70px;
+    height: 46px;
     background: rgba(147,233,190, .6);
     color: #fff;
     border-radius: 10px;
@@ -48,8 +47,8 @@
     text-align: left;
     padding-left: 20px;
     position: absolute;
-    bottom: 25px;
-    right: 0
+    bottom: 30px;
+    right: 15px
 }
 
 .zoomBtn:hover {
